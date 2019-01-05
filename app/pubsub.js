@@ -48,12 +48,23 @@ class PubSub {
   }
 
   publish({ channel, message }) {
-    this.publisher.publish(channel, message);
+    this.subscriber.unsubscribe(channel, () => {
+      this.publisher.publish(channel, message, () => {
+        this.subscriber.subscribe(channel);
+      });
+    });
   }
+
   broadcastChain() {
     this.publish({
       channel: CHANNELS.BLOCKCHAIN,
       message: JSON.stringify(this.blockchain.chain)
+    });
+  }
+  broadcastTransaction(transaction) {
+    this.publish({
+      channel: CHANNELS.TRANSACTION,
+      message: JSON.stringify(transaction)
     });
   }
 }
