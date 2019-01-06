@@ -8,7 +8,7 @@ const request = require("request");
 const path = require("path");
 //require blockchain
 const Blockchain = require("./blockchain");
-const PubSub = require("./pubsub");
+const PubSub = require("./app/pubsub");
 const TransactionPool = require("./wallet/transaction-pool");
 const Wallet = require("./wallet");
 const TransactionMiner = require("./app/transaction-miner");
@@ -17,9 +17,9 @@ const isDevelopment = process.env.ENV === "development";
 
 //create a new instance of blockchain,publisher/suscriber network, transcriber pool, wallet
 const blockchain = new Blockchain();
-const pubsub = new PubSub({ blockchain, transactionPool, redisUrl: REDIS_URL });
 const transactionPool = new TransactionPool();
 const wallet = new Wallet();
+const pubsub = new PubSub({ blockchain, transactionPool, redisUrl: REDIS_URL });
 const transactionMiner = new TransactionMiner({
   blockchain,
   transactionPool,
