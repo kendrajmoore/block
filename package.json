@@ -10,7 +10,7 @@
     "start-redis": "redis-server --daemonize yes"
   },
   "jest": {
-    "testEnviroment": "node"
+    "testEnvironment": "node"
   },
   "author": "",
   "license": "ISC",
