@@ -31,6 +31,7 @@ const transactionMiner = new TransactionMiner({
 
 //middleware
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 app.get("/api/blocks", (req, res) => {
   res.json(blockchain.chain);
