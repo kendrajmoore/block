@@ -5,11 +5,11 @@ const { ec, cryptoHash } = require("../util");
 class Wallet {
   constructor() {
     this.balance = STARTING_BALANCE;
-    const keyPair = ec.genKeyPair();
+    //const keyPair = ec.genKeyPair();
 
     this.keyPair = ec.genKeyPair();
     //
-    this.publicKey = keyPair.getPublic();
+    this.publicKey = this.keyPair.getPublic().encode("hex");
   }
 
   sign(data) {
