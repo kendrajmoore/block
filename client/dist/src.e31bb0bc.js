@@ -28352,7 +28352,9 @@ function (_Component) {
           balance = _this$state$walletInf.balance;
       return _react.default.createElement("div", null, "Unicoins", _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/blocks"
-      }, "Blocks")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }, "Blocks"), _react.default.createElement(_reactRouterDom.Link, {
+        to: "/conduct-transaction"
+      }, "Conduct Transaction")), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "WalletInfo"
       }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)));
     }
