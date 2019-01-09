@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Blocks from "./Blocks";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   state = { walletInfo: {} };
@@ -13,12 +13,15 @@ class App extends Component {
     return (
       <div>
         Unicoins
+        <br />
+        <div>
+          <Link to="/blocks">Blocks</Link>
+        </div>
+        <br />
         <div className="WalletInfo">
           <h1>Address: {address}</h1>
           <h1>Balance: {balance}</h1>
         </div>
-        <br />
-        <Blocks />
       </div>
     );
   }
