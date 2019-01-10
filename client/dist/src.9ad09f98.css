@@ -1,6 +1,7 @@
 body {
   background-color: purple;
   word-wrap: break-word;
+  font-family: "Racing Sans One", cursive;
 }
 
 .WalletInfo {
