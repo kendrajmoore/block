@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 
 class App extends Component {
   state = { walletInfo: {} };
@@ -13,7 +12,6 @@ class App extends Component {
     const { address, balance } = this.state.walletInfo;
     return (
       <div>
-        <Navbar />
         Unicoins
         <br />
         <div>
