@@ -46891,9 +46891,13 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _reactRouterDom = require("react-router-dom");
+var _reactBootstrap = require("react-bootstrap");
 
 var _Transaction = _interopRequireDefault(require("./Transaction"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _history = _interopRequireDefault(require("../history"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46917,7 +46921,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var POLL_INTERVAL_MS = 10000;
+var POLL_INERVAL_MS = 10000;
 
 var TransactionPool =
 /*#__PURE__*/
@@ -46940,12 +46944,22 @@ function (_Component) {
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TransactionPool)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       transactionPoolMap: {}
     }, _this.fetchTransactionPoolMap = function () {
-      fetch("http://localhost:3000/api/transaction-pool-map").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/transaction-pool-map")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this.setState({
           transactionPoolMap: json
         });
+      });
+    }, _this.fetchMineTransactions = function () {
+      fetch("".concat(document.location.origin, "/api/mine-transactions")).then(function (response) {
+        if (response.status === 200) {
+          alert("success");
+
+          _history.default.push("/blocks");
+        } else {
+          alert("The mine-transactions block request did not complete.");
+        }
       });
     }, _temp));
   }
@@ -46953,7 +46967,17 @@ function (_Component) {
   _createClass(TransactionPool, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      var _this2 = this;
+
       this.fetchTransactionPoolMap();
+      this.fetchPoolMapInterval = setInterval(function () {
+        return _this2.fetchTransactionPoolMap();
+      }, POLL_INERVAL_MS);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.fetchPoolMapInterval);
     }
   }, {
     key: "render",
@@ -46968,7 +46992,10 @@ function (_Component) {
         }, _react.default.createElement("hr", null), _react.default.createElement(_Transaction.default, {
           transaction: transaction
         }));
-      }));
+      }), _react.default.createElement("hr", null), _react.default.createElement(_reactBootstrap.Button, {
+        bsStyle: "danger",
+        onClick: this.fetchMineTransactions
+      }, "Mine the Transactions"));
     }
   }]);
 
@@ -46977,7 +47004,7 @@ function (_Component) {
 
 var _default = TransactionPool;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/es/index.js","./Transaction":"components/Transaction.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js","react-router-dom":"../../node_modules/react-router-dom/es/index.js","../history":"history.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -47041,7 +47068,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53610" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51061" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
