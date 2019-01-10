@@ -28336,7 +28336,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch("http://localhost:3000/api/wallet-info").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/wallet-info")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this2.setState({
@@ -46733,7 +46733,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch("http://localhost:3000/api/blocks").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/blocks")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this2.setState({
@@ -46832,7 +46832,7 @@ function (_Component) {
       var _this$state = _this.state,
           recipient = _this$state.recipient,
           amount = _this$state.amount;
-      fetch("http://localhost:3000/api/transact", {
+      fetch("".concat(document.location.origin, "/api/transact"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
