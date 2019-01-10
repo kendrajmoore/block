@@ -3,9 +3,12 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv").config();
 //parse json
+const mongoose = require("mongoose");
+const passport = require("passport");
 const bodyParser = require("body-parser");
 const request = require("request");
 const path = require("path");
+const morgan = require("morgan");
 const isDevelopment = process.env.ENV === "development";
 
 const REDIS_URL = isDevelopment
@@ -34,7 +37,19 @@ const transactionMiner = new TransactionMiner({
 
 //middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client/dist")));
+app.use(morgan("dev"));
+
+// Mongoose Connection
+const mongoUri =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/unicoins";
+mongoose.connect(
+  mongoUri,
+  {
+    useNewUrlParser: true
+  }
+);
 
 app.get("/api/blocks", (req, res) => {
   res.json(blockchain.chain);
@@ -105,6 +120,12 @@ app.get("/api/mine-transactions", (req, res) => {
   transactionMiner.mineTransactions();
 
   res.redirect("/api/blocks");
+});
+
+//Users Route
+
+app.get("/api/users", (req, res) => {
+  res.json({ type: "success", message: "Hi bitch" });
 });
 
 app.get("/api/wallet-info", (req, res) => {

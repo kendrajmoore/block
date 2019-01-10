@@ -47014,6 +47014,8 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -47049,11 +47051,11 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement("nav", {
-        className: "navbar navbar-expand-lg navbar-dark bg-dark"
-      }, _react.default.createElement("a", {
+        className: "navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+      }, _react.default.createElement(_reactRouterDom.Link, {
         className: "navbar-brand",
-        href: "#"
-      }, "Navbar"), _react.default.createElement("button", {
+        to: "/"
+      }, "Unicoins"), _react.default.createElement("button", {
         className: "navbar-toggler",
         type: "button",
         "data-toggle": "collapse",
@@ -47070,44 +47072,22 @@ function (_Component) {
         className: "navbar-nav"
       }, _react.default.createElement("li", {
         className: "nav-item active"
-      }, _react.default.createElement("a", {
+      }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
-        href: "#"
+        to: "/"
       }, "Home ", _react.default.createElement("span", {
         className: "sr-only"
       }, "(current)"))), _react.default.createElement("li", {
         className: "nav-item"
-      }, _react.default.createElement("a", {
+      }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
-        href: "#"
-      }, "Features")), _react.default.createElement("li", {
+        to: "/login"
+      }, "Login")), _react.default.createElement("li", {
         className: "nav-item"
-      }, _react.default.createElement("a", {
+      }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
-        href: "#"
-      }, "Pricing")), _react.default.createElement("li", {
-        className: "nav-item dropdown"
-      }, _react.default.createElement("a", {
-        className: "nav-link dropdown-toggle",
-        href: "#",
-        id: "navbarDropdownMenuLink",
-        role: "button",
-        "data-toggle": "dropdown",
-        "aria-haspopup": "true",
-        "aria-expanded": "false"
-      }, "Dropdown link"), _react.default.createElement("div", {
-        className: "dropdown-menu",
-        "aria-labelledby": "navbarDropdownMenuLink"
-      }, _react.default.createElement("a", {
-        className: "dropdown-item",
-        href: "#"
-      }, "Action"), _react.default.createElement("a", {
-        className: "dropdown-item",
-        href: "#"
-      }, "Another action"), _react.default.createElement("a", {
-        className: "dropdown-item",
-        href: "#"
-      }, "Something else here"))))));
+        to: "/signup"
+      }, "Signup")))));
     }
   }]);
 
@@ -47116,7 +47096,7 @@ function (_Component) {
 
 var _default = Navbar;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Footer.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/es/index.js"}],"components/Footer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47208,7 +47188,244 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"components/Login.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+var Login =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Login, _Component);
+
+  function Login() {
+    var _this;
+
+    _classCallCheck(this, Login);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this));
+    _this.state = {
+      email: "",
+      password: "",
+      errors: {}
+    };
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    return _this;
+  }
+
+  _createClass(Login, [{
+    key: "onSubmit",
+    value: function onSubmit(e) {
+      e.preventDefault();
+      var user = {
+        email: this.state.email,
+        password: this.state.password
+      };
+      console.log(user);
+    }
+  }, {
+    key: "onChange",
+    value: function onChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        className: "login"
+      }, _react.default.createElement("div", {
+        className: "container"
+      }, _react.default.createElement("div", {
+        className: "row"
+      }, _react.default.createElement("div", {
+        className: "col-md-8 m-auto"
+      }, _react.default.createElement("h1", {
+        className: "display-4 text-center"
+      }, "Log In"), _react.default.createElement("p", {
+        className: "lead text-center"
+      }, "Sign in"), _react.default.createElement("form", {
+        onSubmit: this.onSubmit
+      }, _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("input", {
+        type: "email",
+        className: "form-control form-control-lg",
+        placeholder: "Email Address",
+        name: "email",
+        value: this.state.email,
+        onChange: this.onChange
+      })), _react.default.createElement("div", {
+        className: "form-group"
+      }, _react.default.createElement("input", {
+        type: "password",
+        className: "form-control form-control-lg",
+        placeholder: "Password",
+        name: "password",
+        value: this.state.password,
+        onChange: this.onChange
+      })), _react.default.createElement("input", {
+        type: "submit",
+        className: "btn btn-info btn-block mt-4"
+      }))))));
+    }
+  }]);
+
+  return Login;
+}(_react.Component);
+
+var _default = Login;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js"}],"components/Signup.js":[function(require,module,exports) {
+// import React, { Component } from "react";
+// import axios from "axios";
+//
+// class Signup extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       name: "",
+//       email: "",
+//       password: "",
+//       password2: "",
+//       errors: {}
+//     };
+//
+//     this.onChange = this.onChange.bind(this);
+//     this.onSubmit = this.onSubmit.bind(this);
+//   }
+//
+//   onChange(e) {
+//     this.setState({ [e.target.name]: e.target.value });
+//   }
+//
+//   onSubmit(e) {
+//     e.preventDefault();
+//
+//     const newUser = {
+//       name: this.state.name,
+//       email: this.state.email,
+//       password: this.state.password,
+//       password2: this.state.password2
+//     };
+//
+//     axios
+//       .post("/api/users/register", newUser)
+//       .then(res => console.log(res.data))
+//       .catch(err => this.setState({ errors: err.response.data }));
+//   }
+//
+//   render() {
+//     const { errors } = this.state;
+//
+//     return (
+//   //     <div className="register">
+//   //       <div className="container">
+//   //         <div className="row">
+//   //           <div className="col-md-8 m-auto">
+//   //             <h1 className="display-4 text-center">Sign Up</h1>
+//   //             <p className="lead text-center">Create your account</p>
+//   //             <form noValidate onSubmit={this.onSubmit}>
+//   //               <div className="form-group">
+//   //                 <input
+//   //                   type="text"
+//   //                   className={classnames("form-control form-control-lg", {
+//   //                     "is-invalid": errors.name
+//   //                   })}
+//   //                   placeholder="Name"
+//   //                   name="name"
+//   //                   value={this.state.name}
+//   //                   onChange={this.onChange}
+//   //                 />
+//   //                 {errors.name && (
+//   //                   <div className="invalid-feedback">{errors.name}</div>
+//   //                 )}
+//   //               </div>
+//   //               <div className="form-group">
+//   //                 <input
+//   //                   type="email"
+//   //                   className={classnames("form-control form-control-lg", {
+//   //                     "is-invalid": errors.email
+//   //                   })}
+//   //                   placeholder="Email Address"
+//   //                   name="email"
+//   //                   value={this.state.email}
+//   //                   onChange={this.onChange}
+//   //                 />
+//   //                 {errors.email && (
+//   //                   <div className="invalid-feedback">{errors.email}</div>
+//   //                 )}
+//   //               </div>
+//   //               <div className="form-group">
+//   //                 <input
+//   //                   type="password"
+//   //                   className={classnames("form-control form-control-lg", {
+//   //                     "is-invalid": errors.password
+//   //                   })}
+//   //                   placeholder="Password"
+//   //                   name="password"
+//   //                   value={this.state.password}
+//   //                   onChange={this.onChange}
+//   //                 />
+//   //                 {errors.password && (
+//   //                   <div className="invalid-feedback">{errors.password}</div>
+//   //                 )}
+//   //               </div>
+//   //               <div className="form-group">
+//   //                 <input
+//   //                   type="password"
+//   //                   className={classnames("form-control form-control-lg", {
+//   //                     "is-invalid": errors.password2
+//   //                   })}
+//   //                   placeholder="Confirm Password"
+//   //                   name="password2"
+//   //                   value={this.state.password2}
+//   //                   onChange={this.onChange}
+//   //                 />
+//   //                 {errors.password2 && (
+//   //                   <div className="invalid-feedback">{errors.password2}</div>
+//   //                 )}
+//   //               </div>
+//   //               <input type="submit" className="btn btn-info btn-block mt-4" />
+//   //             </form>
+//   //           </div>
+//   //         </div>
+//   //       </div>
+//   //     </div>
+//   //   );
+//   // }
+// //)
+// // }
+//
+// export default Signup;
+},{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -47233,6 +47450,10 @@ var _Footer = _interopRequireDefault(require("./components/Footer"));
 
 var _Landing = _interopRequireDefault(require("./components/Landing"));
 
+var _Login = _interopRequireDefault(require("./components/Login"));
+
+var _Signup = _interopRequireDefault(require("./components/Signup"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.render)(_react.default.createElement(_reactRouterDom.Router, {
@@ -47254,8 +47475,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 }), _react.default.createElement(_reactRouterDom.Route, {
   path: "/transaction-pool",
   component: _TransactionPool.default
+}), _react.default.createElement(_reactRouterDom.Route, {
+  path: "/login",
+  component: _Login.default
+}), "// ", _react.default.createElement(_reactRouterDom.Route, {
+  path: "/signup",
+  component: _Signup.default
 }), _react.default.createElement(_Footer.default, null))), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-router-dom":"../../node_modules/react-router-dom/es/index.js","./history":"history.js","./components/App":"components/App.js","./components/Blocks":"components/Blocks.js","./components/ConductTransaction":"components/ConductTransaction.js","./components/TransactionPool":"components/TransactionPool.js","./components/Navbar":"components/Navbar.js","./components/Footer":"components/Footer.js","./components/Landing":"components/Landing.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-router-dom":"../../node_modules/react-router-dom/es/index.js","./history":"history.js","./components/App":"components/App.js","./components/Blocks":"components/Blocks.js","./components/ConductTransaction":"components/ConductTransaction.js","./components/TransactionPool":"components/TransactionPool.js","./components/Navbar":"components/Navbar.js","./components/Footer":"components/Footer.js","./components/Landing":"components/Landing.js","./components/Login":"components/Login.js","./components/Signup":"components/Signup.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

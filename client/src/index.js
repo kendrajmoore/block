@@ -9,6 +9,8 @@ import TransactionPool from "./components/TransactionPool";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 render(
   <Router history={history}>
@@ -19,6 +21,8 @@ render(
       <Route path="/blocks" component={Blocks} />
       <Route path="/conduct-transaction" component={ConductTransaction} />
       <Route path="/transaction-pool" component={TransactionPool} />
+      <Route path="/login" component={Login} />
+      // <Route path="/signup" component={Signup} />
       <Footer />
     </div>
   </Router>,
