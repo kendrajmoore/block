@@ -47087,7 +47087,27 @@ function (_Component) {
       }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
         to: "/signup"
-      }, "Signup")))));
+      }, "Signup")), _react.default.createElement("li", {
+        className: "nav-item"
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/wallet"
+      }, "Wallet")), _react.default.createElement("li", {
+        className: "nav-item"
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/blocks"
+      }, "Chain")), _react.default.createElement("li", {
+        className: "nav-item"
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/conduct-transaction"
+      }, "Purchase")), _react.default.createElement("li", {
+        className: "nav-item"
+      }, _react.default.createElement(_reactRouterDom.Link, {
+        className: "nav-link",
+        to: "/transaction-pool"
+      }, "Receipt")))));
     }
   }]);
 
@@ -47161,25 +47181,25 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "landing"
-      }, _react.default.createElement("div", {
+      }, "//", " ", _react.default.createElement("div", {
         className: "dark-overlay landing-inner text-light"
       }, _react.default.createElement("div", {
         className: "container"
       }, _react.default.createElement("div", {
         className: "row"
-      }, _react.default.createElement("div", {
+      }, "//", " ", _react.default.createElement("div", {
         className: "col-md-12 text-center"
       }, _react.default.createElement("h1", {
         className: "display-3 mb-4"
       }, "Unicoins"), _react.default.createElement("p", {
         className: "lead"
-      }, " Blockchain for unicoin lovers"), _react.default.createElement("hr", null), _react.default.createElement("a", {
+      }, " Blockchain for unicorn lovers"), _react.default.createElement("hr", null), _react.default.createElement("a", {
         href: "register.html",
         className: "btn btn-lg btn-info mr-2"
       }, "Sign Up"), _react.default.createElement("a", {
         href: "login.html",
         className: "btn btn-lg btn-light"
-      }, "Login"))))));
+      }, "Login"))), "//", " "), "//", " "));
     }
   }]);
 
@@ -47509,7 +47529,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51061" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54457" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

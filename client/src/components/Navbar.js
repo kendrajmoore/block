@@ -36,6 +36,26 @@ class Navbar extends Component {
                 Signup
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/wallet">
+                Wallet
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blocks">
+                Chain
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/conduct-transaction">
+                Purchase
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/transaction-pool">
+                Receipt
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

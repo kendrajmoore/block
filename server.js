@@ -13,6 +13,7 @@ const jwt = require("jsonwebtoken");
 const morgan = require("morgan");
 const isDevelopment = process.env.ENV === "development";
 const User = require("./models/User");
+const keys = require("./config/keys");
 
 const REDIS_URL = isDevelopment
   ? "redis://127.0.0.1:6379"
@@ -41,6 +42,8 @@ const transactionMiner = new TransactionMiner({
 //middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+require("./config/passport")(passport);
+app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, "client/dist")));
 app.use(morgan("dev"));
 
@@ -134,7 +137,7 @@ app.get("/api/users", (req, res) => {
 app.post("/api/signup", (req, res) => {
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {
-      return res.status(400).json({ Email: "taken" });
+      return res.status(400).json({ Email: "Invalid" });
     } else {
       const newUser = new User({
         name: req.body.name,
@@ -168,7 +171,7 @@ app.post("/api/login", (req, res) => {
         const payload = { id: user.id, name: user.name };
         jwt.sign(
           payload,
-          process.env.SECRET,
+          keys.secretOrKey,
           { expiresIn: 3600 },
           (err, token) => {
             res.json({
@@ -183,6 +186,18 @@ app.post("/api/login", (req, res) => {
     });
   });
 });
+
+app.get(
+  "/current",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    res.json({
+      id: req.user.id,
+      name: req.user.name,
+      email: req.user.email
+    });
+  }
+);
 
 app.get("/api/wallet-info", (req, res) => {
   const address = wallet.publicKey;
