@@ -15,10 +15,6 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
-  },
-  date: {
-    type: Date,
-    default: Default.now
   }
 });
 
@@ -30,8 +26,8 @@ const UserSchema = new Schema({
 //   if (!this.createdAt) {
 //     this.createdAt = now;
 //   }
-//
-//   // ENCRYPT PASSWORD
+
+// ENCRYPT PASSWORD
 //   const user = this;
 //   if (!user.isModified("password")) {
 //     return next();
