@@ -1,8 +1,9 @@
 //start express server
 const express = require("express");
 const app = express();
+//.env config
 const dotenv = require("dotenv").config();
-//parse json
+//for mongodb
 const mongoose = require("mongoose");
 const passport = require("passport");
 const bodyParser = require("body-parser");
@@ -14,7 +15,7 @@ const morgan = require("morgan");
 const isDevelopment = process.env.ENV === "development";
 const User = require("./models/User");
 const keys = require("./config/keys");
-
+//redis instance
 const REDIS_URL = isDevelopment
   ? "redis://127.0.0.1:6379"
   : "redis://h:p778fbc8e8cd557889a30b175f00a743dfd70b752af7d3f79dcb81c238fd4124d@ec2-3-81-188-41.compute-1.amazonaws.com:28699";
@@ -47,7 +48,7 @@ app.use(passport.initialize());
 app.use(express.static(path.join(__dirname, "client/dist")));
 app.use(morgan("dev"));
 
-// Mongoose Connection
+// Mongodb Connection
 const mongoUri =
   process.env.MONGODB_URI || "mongodb://localhost:27017/unicoins";
 mongoose.connect(
@@ -56,7 +57,7 @@ mongoose.connect(
     useNewUrlParser: true
   }
 );
-
+//api for blockchain - will move in future
 app.get("/api/blocks", (req, res) => {
   res.json(blockchain.chain);
 });
@@ -79,7 +80,7 @@ app.get("/api/blocks/:id", (req, res) => {
 
   res.json(blocksReversed.slice(startIndex, endIndex));
 });
-
+//ability to mine transaction
 app.post("/api/mine", (req, res) => {
   const { data } = req.body;
 
@@ -128,7 +129,7 @@ app.get("/api/mine-transactions", (req, res) => {
   res.redirect("/api/blocks");
 });
 
-//Users Route
+//Users Route - will move in future
 
 app.get("/api/users", (req, res) => {
   res.json({ type: "success", message: "Hi bitch" });

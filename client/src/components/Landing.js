@@ -1,4 +1,6 @@
+//first page of project not root element
 import React, { Component } from "react";
+import unicoins_logo from "../assets/unicoins_logo.png";
 
 class Landing extends Component {
   render() {
@@ -10,8 +12,7 @@ class Landing extends Component {
             <div className="row">
               //{" "}
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Unicoins</h1>
-                <p className="lead"> Blockchain for unicorn lovers</p>
+                <img src={unicoins_logo} alt="Logo" />;
                 <hr />
                 <a href="register.html" className="btn btn-lg btn-info mr-2">
                   Sign Up

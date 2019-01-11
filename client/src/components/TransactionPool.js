@@ -4,6 +4,7 @@ import Transaction from "./Transaction";
 import { Link } from "react-router-dom";
 import history from "../history";
 
+//need to wait for transaction to be mined and validated
 const POLL_INERVAL_MS = 10000;
 
 class TransactionPool extends Component {

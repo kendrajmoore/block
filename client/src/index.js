@@ -1,3 +1,4 @@
+//all my components, packages, and assets
 import React from "react";
 import { render } from "react-dom";
 import { Router, Switch, Route } from "react-router-dom";
@@ -13,6 +14,7 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 
 render(
+  //help with back button
   <Router history={history}>
     <div>
       <Navbar />

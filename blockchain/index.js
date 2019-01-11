@@ -8,7 +8,7 @@ class Blockchain {
   constructor() {
     this.chain = [Block.genesis()];
   }
-
+  //purchase blocks
   addBlock({ data }) {
     const newBlock = Block.mineBlock({
       lastBlock: this.chain[this.chain.length - 1],
@@ -42,6 +42,7 @@ class Blockchain {
   validTransactionData({ chain }) {
     for (let i = 1; i < chain.length; i++) {
       const block = chain[i];
+      //make sure no duplicates with a set/tuple
       const transactionSet = new Set();
       let rewardTransactionCount = 0;
 
@@ -63,6 +64,7 @@ class Blockchain {
             console.error("Invalid transaction");
             return false;
           }
+          //update the wallet
 
           const trueBalance = Wallet.calculateBalance({
             chain: this.chain,
@@ -88,7 +90,7 @@ class Blockchain {
 
     return true;
   }
-
+  //make sure information matches
   static isValidChain(chain) {
     if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) {
       return false;

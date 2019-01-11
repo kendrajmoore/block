@@ -28273,6 +28273,7 @@ var _createBrowserHistory = _interopRequireDefault(require("history/createBrowse
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//enable routing and back button
 var _default = (0, _createBrowserHistory.default)();
 
 exports.default = _default;
@@ -46546,6 +46547,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//view individual transaction
 var Transaction = function Transaction(_ref) {
   var transaction = _ref.transaction;
   var input = transaction.input,
@@ -46921,6 +46923,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+//need to wait for transaction to be mined and validated
 var POLL_INERVAL_MS = 10000;
 
 var TransactionPool =
@@ -47128,6 +47131,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//my non cooperative footer
 var _default = function _default() {
   return _react.default.createElement("footer", {
     className: "bg-dark text-white mt-5 p-4 text-center"
@@ -47135,7 +47139,9 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Landing.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"assets/unicoins_logo.png":[function(require,module,exports) {
+module.exports = "/unicoins_logo.371f0adb.png";
+},{}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47144,6 +47150,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _unicoins_logo = _interopRequireDefault(require("../assets/unicoins_logo.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -47189,11 +47199,10 @@ function (_Component) {
         className: "row"
       }, "//", " ", _react.default.createElement("div", {
         className: "col-md-12 text-center"
-      }, _react.default.createElement("h1", {
-        className: "display-3 mb-4"
-      }, "Unicoins"), _react.default.createElement("p", {
-        className: "lead"
-      }, " Blockchain for unicorn lovers"), _react.default.createElement("hr", null), _react.default.createElement("a", {
+      }, _react.default.createElement("img", {
+        src: _unicoins_logo.default,
+        alt: "Logo"
+      }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {
         href: "register.html",
         className: "btn btn-lg btn-info mr-2"
       }, "Sign Up"), _react.default.createElement("a", {
@@ -47208,7 +47217,7 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Login.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/unicoins_logo.png":"assets/unicoins_logo.png"}],"components/Login.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47476,7 +47485,9 @@ var _Signup = _interopRequireDefault(require("./components/Signup"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react.default.createElement(_reactRouterDom.Router, {
+//all my components, packages, and assets
+(0, _reactDom.render)( //help with back button
+_react.default.createElement(_reactRouterDom.Router, {
   history: _history.default
 }, _react.default.createElement("div", null, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_reactRouterDom.Route, {
   exact: true,

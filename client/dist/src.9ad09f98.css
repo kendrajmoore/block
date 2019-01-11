@@ -1,5 +1,5 @@
 body {
-  background-color: purple;
+  background-color: #feeb72;
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive;
 }
@@ -19,5 +19,5 @@ body {
 }
 
 footer.bg-dark text-white mt-5 p-4 text-center {
-  margin-top: 500px;
+  display: none;
 }

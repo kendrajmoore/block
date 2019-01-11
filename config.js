@@ -1,3 +1,5 @@
+//need to start the blockchain with basic wallet balance and genesis block
+
 const MINE_RATE = 1000;
 const INITIAL_DIFFICULTY = 3;
 

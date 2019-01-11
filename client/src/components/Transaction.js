@@ -1,3 +1,4 @@
+//view individual transaction
 import React from "react";
 
 const Transaction = ({ transaction }) => {

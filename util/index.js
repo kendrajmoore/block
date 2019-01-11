@@ -1,6 +1,7 @@
+//package for elliptical math
 const EC = require("elliptic").ec;
 const cryptoHash = require("./crypto-hash");
-
+//type of function
 const ec = new EC("secp256k1");
 
 const verifySignature = ({ publicKey, data, signature }) => {

@@ -1,3 +1,4 @@
+//make block into binary
 const hexToBinary = require("hex-to-binary");
 const { GENESIS_DATA, MINE_RATE } = require("../config");
 const { cryptoHash } = require("../util");
@@ -8,6 +9,7 @@ class Block {
     this.lastHash = lastHash;
     this.hash = hash;
     this.data = data;
+    //make my unicoin more difficult to steal
     this.nonce = nonce;
     this.difficulty = difficulty;
   }
@@ -22,7 +24,7 @@ class Block {
     let hash, timestamp;
     let { difficulty } = lastBlock;
     let nonce = 0;
-
+    //necessary to validate block
     do {
       nonce++;
       timestamp = Date.now();

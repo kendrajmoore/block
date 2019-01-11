@@ -1,3 +1,5 @@
+//display the entire blockchain
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Block from "./Block";

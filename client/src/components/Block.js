@@ -1,3 +1,4 @@
+//purchase individual blocks
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import Transaction from "./Transaction";
