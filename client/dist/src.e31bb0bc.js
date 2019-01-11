@@ -47141,6 +47141,8 @@ var _default = function _default() {
 exports.default = _default;
 },{"react":"../../node_modules/react/index.js"}],"assets/Unicoins.png":[function(require,module,exports) {
 module.exports = "/Unicoins.5a9f61d4.png";
+},{}],"assets/pink.png":[function(require,module,exports) {
+module.exports = "/pink.dd07bb77.png";
 },{}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
 
@@ -47152,6 +47154,8 @@ exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 
 var _Unicoins = _interopRequireDefault(require("../assets/Unicoins.png"));
+
+var _pink = _interopRequireDefault(require("../assets/pink.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47200,7 +47204,7 @@ function (_Component) {
       }, "//", " ", _react.default.createElement("div", {
         className: "col-md-12 text-center"
       }, _react.default.createElement("img", {
-        src: _Unicoins.default,
+        src: _pink.default,
         alt: "Logo"
       }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {
         href: "register.html",
@@ -47217,7 +47221,7 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../assets/Unicoins.png":"assets/Unicoins.png"}],"components/Login.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/Unicoins.png":"assets/Unicoins.png","../assets/pink.png":"assets/pink.png"}],"components/Login.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
