@@ -47110,7 +47110,7 @@ function (_Component) {
       }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
         to: "/transaction-pool"
-      }, "Receipt")))));
+      }, "Updates")))));
     }
   }]);
 
@@ -47139,8 +47139,8 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"assets/unicoins_logo.png":[function(require,module,exports) {
-module.exports = "/unicoins_logo.371f0adb.png";
+},{"react":"../../node_modules/react/index.js"}],"assets/Unicoins.png":[function(require,module,exports) {
+module.exports = "/Unicoins.5a9f61d4.png";
 },{}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
 
@@ -47151,7 +47151,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _unicoins_logo = _interopRequireDefault(require("../assets/unicoins_logo.png"));
+var _Unicoins = _interopRequireDefault(require("../assets/Unicoins.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47198,9 +47198,9 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "row"
       }, "//", " ", _react.default.createElement("div", {
-        className: "col-md-12 text-center"
+        className: "second col-md-12 text-center"
       }, _react.default.createElement("img", {
-        src: _unicoins_logo.default,
+        src: _Unicoins.default,
         alt: "Logo"
       }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {
         href: "register.html",
@@ -47217,7 +47217,7 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../assets/unicoins_logo.png":"assets/unicoins_logo.png"}],"components/Login.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/Unicoins.png":"assets/Unicoins.png"}],"components/Login.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47540,7 +47540,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51090" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60380" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
