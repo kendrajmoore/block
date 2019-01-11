@@ -54,7 +54,7 @@ class Navbar extends Component {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/transaction-pool">
-                Receipt
+                Updates
               </Link>
             </li>
           </ul>
