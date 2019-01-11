@@ -19,7 +19,9 @@ const REDIS_URL = isDevelopment
   ? "redis://127.0.0.1:6379"
   : "redis://h:p778fbc8e8cd557889a30b175f00a743dfd70b752af7d3f79dcb81c238fd4124d@ec2-3-81-188-41.compute-1.amazonaws.com:28699";
 const DEFAULT_PORT = 3000;
-const ROOT_NODE_ADDRESS = `http://localhost:${DEFAULT_PORT}`;
+const ROOT_NODE_ADDRESS = isDevelopment
+  ? `http://localhost:${DEFAULT_PORT}`
+  : `https://limitless-shelf-23870.herokuapp.com`;
 //require blockchain
 const Blockchain = require("./blockchain");
 const PubSub = require("./app/pubsub");
