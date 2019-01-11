@@ -1,6 +1,6 @@
 //first page of project not root element
 import React, { Component } from "react";
-import pink from "../assets/pink.png";
+import Unicoins from "../assets/Unicoins.png";
 
 class Landing extends Component {
   render() {
@@ -11,8 +11,8 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               //{" "}
-              <div className="col-md-12 text-center">
-                <img src={pink} alt="Logo" />;
+              <div className="second col-md-12 text-center">
+                <img src={Unicoins} alt="Logo" />;
                 <hr />
                 <a href="register.html" className="btn btn-lg btn-info mr-2">
                   Sign Up
