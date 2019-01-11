@@ -47110,7 +47110,7 @@ function (_Component) {
       }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
         to: "/transaction-pool"
-      }, "Receipt")))));
+      }, "Updates")))));
     }
   }]);
 
