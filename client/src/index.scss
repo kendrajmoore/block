@@ -4,10 +4,9 @@ body {
   font-family: "Racing Sans One", cursive;
 }
 
-$theme-colors: (
-  "primary": #0074d9,
-  "danger": #ff4136
-);
+img {
+  margin-top: 50px;
+}
 
 .WalletInfo {
   width: 500px;
@@ -19,7 +18,7 @@ $theme-colors: (
 
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -35,4 +34,9 @@ footer.bg-dark text-white mt-5 p-4 text-center {
 .btn-light {
   background-color: #55aced;
   border-color: #55aced;
+}
+
+.btn-danger {
+  background-color: #c466cb;
+  border-color: #c466cb;
 }
