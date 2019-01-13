@@ -1,7 +1,8 @@
 body {
   background-color: #ed60b0;
   word-wrap: break-word;
-  font-family: "Racing Sans One", cursive; }
+  font-family: "Racing Sans One", cursive;
+  color: #8035a9; }
 
 img {
   margin-top: 50px; }
@@ -11,7 +12,8 @@ img {
 
 .Block {
   border: 1px solid black;
-  color: #8035a9; }
+  color: #8035a9;
+  text-shadow: 2px 2px white; }
 
 .App {
   display: flex;
