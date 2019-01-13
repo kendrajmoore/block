@@ -10,7 +10,9 @@ img {
   width: 500px; }
 
 .Block {
-  border: 1px solid black; }
+  border: 1px solid black;
+  color: #9266cc;
+  text-shadow: 2px 2px white; }
 
 .App {
   display: flex;
