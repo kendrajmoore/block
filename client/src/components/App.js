@@ -25,6 +25,7 @@ class App extends Component {
           <h1>Address: {address}</h1>
           <h1>Balance: {balance}</h1>
         </div>
+        <div className="fix-footer" />
       </div>
     );
   }

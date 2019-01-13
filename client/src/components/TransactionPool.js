@@ -58,6 +58,7 @@ class TransactionPool extends Component {
         <Button bsStyle="danger" onClick={this.fetchMineTransactions}>
           Update
         </Button>
+        <div className="fix-footer" />
       </div>
     );
   }

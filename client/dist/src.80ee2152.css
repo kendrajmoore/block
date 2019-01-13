@@ -26,7 +26,10 @@ img {
 .Signup {
   margin-top: 100px; }
 
-.Transaction {
+.fix-footer {
+  margin-top: 320px; }
+
+.ConductTransaction {
   margin-top: 100px; }
 
 .TransactionPool {

@@ -28359,7 +28359,9 @@ function (_Component) {
         to: "/transaction-pool"
       }, "View Transaction")), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "WalletInfo"
-      }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)));
+      }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -46859,9 +46861,7 @@ function (_Component) {
       console.log("this.state", this.state);
       return _react.default.createElement("div", {
         className: "ConductTransaction"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home"), _react.default.createElement("h3", null, " Conduct Transaction"), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
+      }, _react.default.createElement("h3", null, " Conduct Transaction"), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
         input: "text",
         placeholder: "recipient",
         value: this.state.recipient,
@@ -46874,7 +46874,9 @@ function (_Component) {
       })), _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Button, {
         bsStyle: "danger",
         onClick: this.conductTransaction
-      }, "Submit")));
+      }, "Submit")), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -46996,7 +46998,9 @@ function (_Component) {
       }), _react.default.createElement("hr", null), _react.default.createElement(_reactBootstrap.Button, {
         bsStyle: "danger",
         onClick: this.fetchMineTransactions
-      }, "Update"));
+      }, "Update"), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -47321,7 +47325,9 @@ function (_Component) {
       })), _react.default.createElement("input", {
         type: "submit",
         className: "btn btn-info btn-block mt-4"
-      }))))));
+      }))))), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
