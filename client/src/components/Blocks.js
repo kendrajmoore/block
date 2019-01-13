@@ -21,9 +21,11 @@ class Blocks extends Component {
           <Link to="/">Home</Link>
         </div>
         <h3>Blocks</h3>
-        {this.state.blocks.map(block => {
-          return <Block key={block.hash} block={block} />;
-        })}
+        <div className="container">
+          {this.state.blocks.map(block => {
+            return <Block key={block.hash} block={block} />;
+          })}
+        </div>
       </div>
     );
   }

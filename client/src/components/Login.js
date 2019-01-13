@@ -63,6 +63,7 @@ class Login extends Component {
             </div>
           </div>
         </div>
+        <div className="fix-footer" />
       </div>
     );
   }

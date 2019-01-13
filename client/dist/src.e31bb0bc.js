@@ -28359,7 +28359,9 @@ function (_Component) {
         to: "/transaction-pool"
       }, "View Transaction")), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "WalletInfo"
-      }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)));
+      }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -46658,11 +46660,7 @@ function (_Component) {
         }, "Show Less"));
       }
 
-      return _react.default.createElement("div", null, _react.default.createElement("div", null, "Data: ", dataDisplay), _react.default.createElement(_reactBootstrap.Button, {
-        bsStyle: "danger",
-        bsSize: "small",
-        onClick: this.toggleTransaction
-      }, "Show More"));
+      return _react.default.createElement("div", null, _react.default.createElement("div", null, "Data: ", dataDisplay));
     }
   }]);
 
@@ -46749,12 +46747,14 @@ function (_Component) {
       console.log("this.state", this.state);
       return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Blocks"), this.state.blocks.map(function (block) {
+      }, "Home")), _react.default.createElement("h3", null, "Blocks"), _react.default.createElement("div", {
+        className: "container"
+      }, this.state.blocks.map(function (block) {
         return _react.default.createElement(_Block.default, {
           key: block.hash,
           block: block
         });
-      }));
+      })));
     }
   }]);
 
@@ -46874,7 +46874,9 @@ function (_Component) {
       })), _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Button, {
         bsStyle: "danger",
         onClick: this.conductTransaction
-      }, "Submit")));
+      }, "Submit")), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -46996,7 +46998,9 @@ function (_Component) {
       }), _react.default.createElement("hr", null), _react.default.createElement(_reactBootstrap.Button, {
         bsStyle: "danger",
         onClick: this.fetchMineTransactions
-      }, "Update"));
+      }, "Update"), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -47321,7 +47325,9 @@ function (_Component) {
       })), _react.default.createElement("input", {
         type: "submit",
         className: "btn btn-info btn-block mt-4"
-      }))))));
+      }))))), _react.default.createElement("div", {
+        className: "fix-footer"
+      }));
     }
   }]);
 
@@ -47538,7 +47544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49784" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60079" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

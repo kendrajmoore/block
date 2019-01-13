@@ -56,6 +56,7 @@ class ConductTransaction extends Component {
             Submit
           </Button>
         </div>
+        <div className="fix-footer" />
       </div>
     );
   }

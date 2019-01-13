@@ -2,6 +2,7 @@ body {
   background-color: #feeb72;
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive;
+  color: #8035a9;
 }
 
 img {
@@ -9,13 +10,24 @@ img {
 }
 
 .WalletInfo {
+  margin-top: 100px;
   width: 500px;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .Block {
-  border: 1px solid black;
+  border: 1px solid #8035a9;
   color: #8035a9;
-  // text-shadow: 2px 2px #8035a9;
+  text-shadow: 2px 2px white;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 20px;
 }
 
 .App {
@@ -31,8 +43,11 @@ img {
 .Signup {
   margin-top: 100px;
 }
+.fix-footer {
+  margin-top: 450px;
+}
 
-.Transaction {
+.ConductTransaction {
   margin-top: 100px;
 }
 
