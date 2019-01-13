@@ -47139,9 +47139,7 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"assets/Unicoins.png":[function(require,module,exports) {
-module.exports = "/Unicoins.5a9f61d4.png";
-},{}],"assets/pink.png":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"assets/pink.png":[function(require,module,exports) {
 module.exports = "/pink.dd07bb77.png";
 },{}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
@@ -47152,8 +47150,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
-
-var _Unicoins = _interopRequireDefault(require("../assets/Unicoins.png"));
 
 var _pink = _interopRequireDefault(require("../assets/pink.png"));
 
@@ -47202,7 +47198,7 @@ function (_Component) {
       }, _react.default.createElement("div", {
         className: "row"
       }, "//", " ", _react.default.createElement("div", {
-        className: "col-md-12 text-center"
+        className: "second col-md-12 text-center"
       }, _react.default.createElement("img", {
         src: _pink.default,
         alt: "Logo"
@@ -47221,7 +47217,7 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../assets/Unicoins.png":"assets/Unicoins.png","../assets/pink.png":"assets/pink.png"}],"components/Login.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/pink.png":"assets/pink.png"}],"components/Login.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47544,7 +47540,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52271" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49695" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
