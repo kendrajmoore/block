@@ -28351,13 +28351,7 @@ function (_Component) {
       var _this$state$walletInf = this.state.walletInfo,
           address = _this$state$walletInf.address,
           balance = _this$state$walletInf.balance;
-      return _react.default.createElement("div", null, "Unicoins", _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/blocks"
-      }, "Blocks"), _react.default.createElement(_reactRouterDom.Link, {
-        to: "/conduct-transaction"
-      }, "Conduct Transaction"), _react.default.createElement(_reactRouterDom.Link, {
-        to: "/transaction-pool"
-      }, "View Transaction")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "WalletInfo"
       }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)), _react.default.createElement("div", {
         className: "fix-footer"
@@ -46660,11 +46654,7 @@ function (_Component) {
         }, "Show Less"));
       }
 
-      return _react.default.createElement("div", null, _react.default.createElement("div", null, "Data: ", dataDisplay), _react.default.createElement(_reactBootstrap.Button, {
-        bsStyle: "danger",
-        bsSize: "small",
-        onClick: this.toggleTransaction
-      }, "Show More"));
+      return _react.default.createElement("div", null, _react.default.createElement("div", null, "Data: ", dataDisplay));
     }
   }]);
 
@@ -46751,12 +46741,14 @@ function (_Component) {
       console.log("this.state", this.state);
       return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Blocks"), this.state.blocks.map(function (block) {
+      }, "Home")), _react.default.createElement("h3", null, "Blocks"), _react.default.createElement("div", {
+        className: "container"
+      }, this.state.blocks.map(function (block) {
         return _react.default.createElement(_Block.default, {
           key: block.hash,
           block: block
         });
-      }));
+      })));
     }
   }]);
 
