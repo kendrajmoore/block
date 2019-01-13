@@ -27,7 +27,7 @@ npm run jest
 
 - [Node](https://nodejs.org/en/) - is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 - [React](https://maven.apache.org/) - A JavaScript library for building user interfaces
-- [Redis](https://redis.io/) - s an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker
+- [Redis](https://redis.io/) - is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker
 
 ## Authors
 
