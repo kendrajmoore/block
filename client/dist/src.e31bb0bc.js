@@ -46987,9 +46987,7 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "TransactionPool"
-      }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Transaction Pool"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
+      }, _react.default.createElement("h3", null, "Pending Transactions"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
         return _react.default.createElement("div", {
           key: transaction.id
         }, _react.default.createElement("hr", null), _react.default.createElement(_Transaction.default, {
@@ -46998,7 +46996,7 @@ function (_Component) {
       }), _react.default.createElement("hr", null), _react.default.createElement(_reactBootstrap.Button, {
         bsStyle: "danger",
         onClick: this.fetchMineTransactions
-      }, "Mine the Transactions"));
+      }, "Update"));
     }
   }]);
 
@@ -47540,7 +47538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49695" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51660" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

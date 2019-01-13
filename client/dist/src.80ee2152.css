@@ -1,5 +1,5 @@
 body {
-  background-color: #ed61b0;
+  background-color: #ed60b0;
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive; }
 
@@ -11,13 +11,24 @@ img {
 
 .Block {
   border: 1px solid black;
-  color: #9266cc;
-  text-shadow: 2px 2px white; }
+  color: #8035a9; }
 
 .App {
   display: flex;
   flex-direction: row;
   align-items: center; }
+
+.Login {
+  margin-top: 100px; }
+
+.Signup {
+  margin-top: 100px; }
+
+.Transaction {
+  margin-top: 100px; }
+
+.TransactionPool {
+  margin-top: 100px; }
 
 footer.bg-dark text-white mt-5 p-4 text-center {
   display: none; }
