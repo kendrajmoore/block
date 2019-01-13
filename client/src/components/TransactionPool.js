@@ -45,10 +45,7 @@ class TransactionPool extends Component {
   render() {
     return (
       <div className="TransactionPool">
-        <div>
-          <Link to="/">Home</Link>
-        </div>
-        <h3>Transaction Pool</h3>
+        <h3>Pending Transactions</h3>
         {Object.values(this.state.transactionPoolMap).map(transaction => {
           return (
             <div key={transaction.id}>
@@ -59,7 +56,7 @@ class TransactionPool extends Component {
         })}
         <hr />
         <Button bsStyle="danger" onClick={this.fetchMineTransactions}>
-          Mine the Transactions
+          Update
         </Button>
       </div>
     );
