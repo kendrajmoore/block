@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import Transaction from "./Transaction";
-import blue from "../assets/blue.png";
+import yellow from "../assets/yellow.png";
 
 class Block extends Component {
   state = { displayTransaction: false };
@@ -61,7 +61,7 @@ class Block extends Component {
         <div>Hash: {hashDisplay} </div>
         <div>Timestamp: {new Date(timestamp).toLocaleString()} </div>
         {this.displayTransaction}
-        <div> <img className="card" src={blue} alt="Logo" />;</div>
+        <div> <img className="card" src={yellow} alt="Logo" />;</div>
       </div>
     );
   }

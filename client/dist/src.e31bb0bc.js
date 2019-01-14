@@ -48358,8 +48358,8 @@ var Transaction = function Transaction(_ref) {
 
 var _default = Transaction;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"assets/blue.png":[function(require,module,exports) {
-module.exports = "/blue.ff936692.png";
+},{"react":"../../node_modules/react/index.js"}],"assets/yellow.png":[function(require,module,exports) {
+module.exports = "/yellow.b17ca5c8.png";
 },{}],"components/Block.js":[function(require,module,exports) {
 "use strict";
 
@@ -48374,7 +48374,7 @@ var _reactBootstrap = require("react-bootstrap");
 
 var _Transaction = _interopRequireDefault(require("./Transaction"));
 
-var _blue = _interopRequireDefault(require("../assets/blue.png"));
+var _yellow = _interopRequireDefault(require("../assets/yellow.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48438,7 +48438,7 @@ function (_Component) {
         className: "Block"
       }, _react.default.createElement("div", null, "Hash: ", hashDisplay, " "), _react.default.createElement("div", null, "Timestamp: ", new Date(timestamp).toLocaleString(), " "), this.displayTransaction, _react.default.createElement("div", null, " ", _react.default.createElement("img", {
         className: "card",
-        src: _blue.default,
+        src: _yellow.default,
         alt: "Logo"
       }), ";"));
     }
@@ -48472,7 +48472,7 @@ function (_Component) {
 
 var _default = Block;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js","../assets/blue.png":"assets/blue.png"}],"components/Blocks.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js","../assets/yellow.png":"assets/yellow.png"}],"components/Blocks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -49087,7 +49087,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57646" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57881" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
