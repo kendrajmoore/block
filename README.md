@@ -48,6 +48,10 @@ git push heroku master
 - [React](https://maven.apache.org/) - A JavaScript library for building user interfaces
 - [Redis](https://redis.io/) - is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker
 
+## Documentation
+
+https://kendrajmoore.github.io/block/
+
 ## Authors
 
 - **Kendra J Moore** - _Initial work_ - [Unicoins](https://github.com/kendrajmoore/block)
