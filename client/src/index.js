@@ -1,7 +1,10 @@
 //all my components, packages, and assets
 import React from "react";
 import { render } from "react-dom";
-import { Router, Switch, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+import {  BrowserRouter } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import { createStore } from 'redux';
 import history from "./history";
 import App from "./components/App";
 import Blocks from "./components/Blocks";
@@ -10,8 +13,7 @@ import TransactionPool from "./components/TransactionPool";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Landing from "./components/Landing";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
+
 
 render(
   //help with back button
@@ -23,10 +25,8 @@ render(
       <Route path="/blocks" component={Blocks} />
       <Route path="/conduct-transaction" component={ConductTransaction} />
       <Route path="/transaction-pool" component={TransactionPool} />
-      <Route path="/login" component={Login} />
-      // <Route path="/signup" component={Signup} />
       <Footer />
     </div>
-  </Router>,
+    </Router>,
   document.getElementById("root")
 );

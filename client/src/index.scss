@@ -1,5 +1,8 @@
 body {
-  background-color: #feeb72;
+
+  background-color: #ff63b1;
+
+
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive;
   color: #8035a9;
@@ -26,6 +29,9 @@ img.card {
   margin: 75px;
   padding: 0;
   width: 200px; }
+.landing-footer {
+  margin-top: 400px;
+}
 
 .Block {
   border: 1px solid #8035a9;
@@ -36,6 +42,12 @@ img.card {
   margin-bottom: 20px;
 }
 
+img.card {
+  margin: 75px;
+  padding: 0;
+  width: 200px;
+
+}
 .App {
   display: flex;
   flex-direction: row;
@@ -46,9 +58,19 @@ img.card {
   margin-top: 100px;
 }
 
-.Signup {
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  margin-top: 200px;
+}
+
+div.register {
   margin-top: 100px;
 }
+
 
 .landing-footer {
   margin-top: 400px;

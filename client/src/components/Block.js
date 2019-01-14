@@ -21,6 +21,7 @@ class Block extends Component {
         ? `${stringifiedData.substring(0, 35)}...`
         : stringifiedData;
 
+
     if (this.state.displayTransaction) {
       return (
         <div>
