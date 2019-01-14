@@ -28351,13 +28351,7 @@ function (_Component) {
       var _this$state$walletInf = this.state.walletInfo,
           address = _this$state$walletInf.address,
           balance = _this$state$walletInf.balance;
-      return _react.default.createElement("div", null, "Unicoins", _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/blocks"
-      }, "Blocks"), _react.default.createElement(_reactRouterDom.Link, {
-        to: "/conduct-transaction"
-      }, "Conduct Transaction"), _react.default.createElement(_reactRouterDom.Link, {
-        to: "/transaction-pool"
-      }, "View Transaction")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      return _react.default.createElement("div", null, _react.default.createElement("div", {
         className: "WalletInfo"
       }, _react.default.createElement("h1", null, "Address: ", address), _react.default.createElement("h1", null, "Balance: ", balance)), _react.default.createElement("div", {
         className: "fix-footer"
@@ -46859,9 +46853,7 @@ function (_Component) {
       console.log("this.state", this.state);
       return _react.default.createElement("div", {
         className: "ConductTransaction"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home"), _react.default.createElement("h3", null, " Conduct Transaction"), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
+      }, _react.default.createElement("h3", null, " Conduct Transaction"), _react.default.createElement(_reactBootstrap.FormGroup, null, _react.default.createElement(_reactBootstrap.FormControl, {
         input: "text",
         placeholder: "recipient",
         value: this.state.recipient,
@@ -47202,6 +47194,7 @@ function (_Component) {
       }, "//", " ", _react.default.createElement("div", {
         className: "second col-md-12 text-center"
       }, _react.default.createElement("img", {
+        className: "first-page",
         src: _Unicoins.default,
         alt: "Logo"
       }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {
@@ -47210,7 +47203,9 @@ function (_Component) {
       }, "Sign Up"), _react.default.createElement("a", {
         href: "login.html",
         className: "btn btn-lg btn-light"
-      }, "Login"))), "//", " "), "//", " "));
+      }, "Login"))), "//", " "), "//", " "), _react.default.createElement("div", {
+        className: "landing-footer"
+      }));
     }
   }]);
 
@@ -47544,7 +47539,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50994" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

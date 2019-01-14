@@ -13,14 +13,6 @@ class App extends Component {
     const { address, balance } = this.state.walletInfo;
     return (
       <div>
-        Unicoins
-        <br />
-        <div>
-          <Link to="/blocks">Blocks</Link>
-          <Link to="/conduct-transaction">Conduct Transaction</Link>
-          <Link to="/transaction-pool">View Transaction</Link>
-        </div>
-        <br />
         <div className="WalletInfo">
           <h1>Address: {address}</h1>
           <h1>Balance: {balance}</h1>

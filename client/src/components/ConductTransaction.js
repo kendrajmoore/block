@@ -33,7 +33,6 @@ class ConductTransaction extends Component {
     console.log("this.state", this.state);
     return (
       <div className="ConductTransaction">
-        <Link to="/">Home</Link>
         <h3> Conduct Transaction</h3>
         <FormGroup>
           <FormControl

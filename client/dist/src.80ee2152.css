@@ -5,7 +5,8 @@ body {
   color: #8035a9; }
 
 img {
-  margin-top: 50px; }
+  margin-top: 150px;
+  margin-left: 150px; }
 
 .WalletInfo {
   margin-top: 100px;
@@ -36,8 +37,11 @@ img {
 .Signup {
   margin-top: 100px; }
 
+.landing-footer {
+  margin-top: 400px; }
+
 .fix-footer {
-  margin-top: 450px; }
+  margin-top: 650px; }
 
 .ConductTransaction {
   margin-top: 100px; }
