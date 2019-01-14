@@ -1,12 +1,11 @@
-//beginning of auth
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       errors: {}
     };
 
@@ -36,7 +35,6 @@ class Login extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">Sign in</p>
               <form onSubmit={this.onSubmit}>
                 <div className="form-group">
                   <input
@@ -63,7 +61,6 @@ class Login extends Component {
             </div>
           </div>
         </div>
-        <div className="fix-footer" />
       </div>
     );
   }
