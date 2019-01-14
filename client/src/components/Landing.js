@@ -26,6 +26,7 @@ class Landing extends Component {
           </div>
           //{" "}
         </div>
+        <div className="landing-footer" />
       </div>
     );
   }

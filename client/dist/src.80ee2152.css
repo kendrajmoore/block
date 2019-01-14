@@ -1,11 +1,12 @@
 body {
-  background-color: #ed60b0;
+  background-color: #ff63b1;
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive;
   color: #8035a9; }
 
 img {
-  margin-top: 50px; }
+  margin-top: 150px;
+  margin-left: 150px; }
 
 .WalletInfo {
   margin-top: 100px;
@@ -16,6 +17,9 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+
+.landing-footer {
+  margin-top: 400px; }
 
 .Block {
   border: 1px solid #8035a9;
@@ -37,7 +41,7 @@ img {
   margin-top: 100px; }
 
 .fix-footer {
-  margin-top: 450px; }
+  margin-top: 650px; }
 
 .ConductTransaction {
   margin-top: 100px; }

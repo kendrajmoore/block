@@ -47202,7 +47202,9 @@ function (_Component) {
       }, "Sign Up"), _react.default.createElement("a", {
         href: "login.html",
         className: "btn btn-lg btn-light"
-      }, "Login"))), "//", " "), "//", " "));
+      }, "Login"))), "//", " "), "//", " "), _react.default.createElement("div", {
+        className: "landing-footer"
+      }));
     }
   }]);
 
@@ -47536,7 +47538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51660" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52235" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
