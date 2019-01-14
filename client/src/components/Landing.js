@@ -1,6 +1,6 @@
 //first page of project not root element
 import React, { Component } from "react";
-import Unicoins from "../assets/Unicoins.png";
+import pink from "../assets/pink.png";
 
 class Landing extends Component {
   render() {
@@ -12,14 +12,8 @@ class Landing extends Component {
             <div className="row">
               //{" "}
               <div className="second col-md-12 text-center">
-                <img className="first-page" src={Unicoins} alt="Logo" />;
+                <img className="first-page" src={pink} alt="Logo" />;
                 <hr />
-                <a href="register.html" className="btn btn-lg btn-info mr-2">
-                  Sign Up
-                </a>
-                <a href="login.html" className="btn btn-lg btn-light">
-                  Login
-                </a>
               </div>
             </div>
             //{" "}
