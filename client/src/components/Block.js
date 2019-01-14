@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
 import Transaction from "./Transaction";
+import yellow from "../assets/yellow.png";
+
 
 class Block extends Component {
   state = { displayTransaction: false };
@@ -19,6 +21,7 @@ class Block extends Component {
       stringifiedData.length > 35
         ? `${stringifiedData.substring(0, 35)}...`
         : stringifiedData;
+
 
     if (this.state.displayTransaction) {
       return (
@@ -50,7 +53,7 @@ class Block extends Component {
 
   render() {
     //console.log("this.displayTransaction", this.displayTransaction);
-    const { timestamp, hash } = this.props.block;
+    const { timestamp, hash, image } = this.props.block;
 
     const hashDisplay = `${hash.substring(0, 15)}...`;
 
@@ -59,6 +62,7 @@ class Block extends Component {
         <div>Hash: {hashDisplay} </div>
         <div>Timestamp: {new Date(timestamp).toLocaleString()} </div>
         {this.displayTransaction}
+        <div> <img className="card" src={yellow} alt="Logo" />;</div>
       </div>
     );
   }
