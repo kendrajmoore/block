@@ -7,6 +7,9 @@ A store to purchase blockchain based unicorn trading cards
 ```https://limitless-shelf-23870.herokuapp.com/https://limitless-shelf-23870.herokuapp.com/
 git fork
 git clone
+cd project folder
+cd peer-cryptochain 
+git clone
 ```
 
 ### Installing
@@ -23,6 +26,22 @@ npm run dev
 npm run jest
 ```
 
+### Tests Functions
+
+This project includes unit tests
+
+## Deployment
+
+```
+heroku create project name
+git push heroku master
+heroku ps:scaleweb=1
+heroku logs
+cd peer-cryptochain
+heroku create project name
+git push heroku master
+```
+
 ## Built With
 
 - [Node](https://nodejs.org/en/) - is a JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -32,3 +51,9 @@ npm run jest
 ## Authors
 
 - **Kendra J Moore** - _Initial work_ - [Unicoins](https://github.com/kendrajmoore/block)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
