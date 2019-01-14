@@ -51853,8 +51853,8 @@ var _default = function _default() {
 };
 
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"assets/pink.png":[function(require,module,exports) {
-module.exports = "/pink.dd07bb77.png";
+},{"react":"../../node_modules/react/index.js"}],"assets/Unicoins.png":[function(require,module,exports) {
+module.exports = "/Unicoins.5a9f61d4.png";
 },{}],"components/Landing.js":[function(require,module,exports) {
 "use strict";
 
@@ -51865,7 +51865,7 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _pink = _interopRequireDefault(require("../assets/pink.png"));
+var _Unicoins = _interopRequireDefault(require("../assets/Unicoins.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -51915,7 +51915,7 @@ function (_Component) {
         className: "second col-md-12 text-center"
       }, _react.default.createElement("img", {
         className: "first-page",
-        src: _pink.default,
+        src: _Unicoins.default,
         alt: "Logo"
       }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {
         href: "register.html",
@@ -51934,7 +51934,7 @@ function (_Component) {
 
 var _default = Landing;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../assets/pink.png":"assets/pink.png"}],"index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/Unicoins.png":"assets/Unicoins.png"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
