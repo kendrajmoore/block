@@ -1,12 +1,5 @@
 <h1 align="center"> Unicoins </h1> <br>
 
-<p align="center">
-  <a href="https://limitless-shelf-23870.herokuapp.com/">
-    <img alt="Unicoins" title="Unicoins" src="#" width="450">
-  </a>
-</p>
-
-
 A store to purchase blockchain based unicorn trading cards
 
 ## Getting Started
