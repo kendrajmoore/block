@@ -46558,7 +46558,9 @@ var Transaction = function Transaction(_ref) {
 
 var _default = Transaction;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Block.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"assets/blue.png":[function(require,module,exports) {
+module.exports = "/blue.ff936692.png";
+},{}],"components/Block.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -46571,6 +46573,8 @@ var _react = _interopRequireWildcard(require("react"));
 var _reactBootstrap = require("react-bootstrap");
 
 var _Transaction = _interopRequireDefault(require("./Transaction"));
+
+var _blue = _interopRequireDefault(require("../assets/blue.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46627,11 +46631,16 @@ function (_Component) {
       //console.log("this.displayTransaction", this.displayTransaction);
       var _this$props$block = this.props.block,
           timestamp = _this$props$block.timestamp,
-          hash = _this$props$block.hash;
+          hash = _this$props$block.hash,
+          image = _this$props$block.image;
       var hashDisplay = "".concat(hash.substring(0, 15), "...");
       return _react.default.createElement("div", {
         className: "Block"
-      }, _react.default.createElement("div", null, "Hash: ", hashDisplay, " "), _react.default.createElement("div", null, "Timestamp: ", new Date(timestamp).toLocaleString(), " "), this.displayTransaction);
+      }, _react.default.createElement("div", null, "Hash: ", hashDisplay, " "), _react.default.createElement("div", null, "Timestamp: ", new Date(timestamp).toLocaleString(), " "), this.displayTransaction, _react.default.createElement("div", null, " ", _react.default.createElement("img", {
+        className: "card",
+        src: _blue.default,
+        alt: "Logo"
+      }), ";"));
     }
   }, {
     key: "displayTransaction",
@@ -46663,7 +46672,7 @@ function (_Component) {
 
 var _default = Block;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js"}],"components/Blocks.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js","../assets/blue.png":"assets/blue.png"}],"components/Blocks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -47075,16 +47084,6 @@ function (_Component) {
       }, "Home ", _react.default.createElement("span", {
         className: "sr-only"
       }, "(current)"))), _react.default.createElement("li", {
-        className: "nav-item"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        className: "nav-link",
-        to: "/login"
-      }, "Login")), _react.default.createElement("li", {
-        className: "nav-item"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        className: "nav-link",
-        to: "/signup"
-      }, "Signup")), _react.default.createElement("li", {
         className: "nav-item"
       }, _react.default.createElement(_reactRouterDom.Link, {
         className: "nav-link",
@@ -47539,7 +47538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50994" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54087" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

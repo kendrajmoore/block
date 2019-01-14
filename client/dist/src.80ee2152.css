@@ -18,6 +18,11 @@ img {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+img.card {
+  margin: 75px;
+  padding: 0;
+  width: 200px; }
+
 .Block {
   border: 1px solid #8035a9;
   color: #8035a9;
@@ -39,6 +44,9 @@ img {
 
 .landing-footer {
   margin-top: 400px; }
+
+a.btn btn-lg btn-info mr-2 {
+  margin-left: 200px; }
 
 .fix-footer {
   margin-top: 650px; }
