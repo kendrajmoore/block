@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://limitless-shelf-23870.herokuapp.com/">
-    <img alt="Unicoins" title="Unicoins" src="http://i.imgur.com/VShxJHs.png" width="450">
+    <img alt="Unicoins" title="Unicoins" src="#" width="450">
   </a>
 </p>
 
