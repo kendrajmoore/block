@@ -47194,6 +47194,7 @@ function (_Component) {
       }, "//", " ", _react.default.createElement("div", {
         className: "second col-md-12 text-center"
       }, _react.default.createElement("img", {
+        className: "first-page",
         src: _pink.default,
         alt: "Logo"
       }), ";", _react.default.createElement("hr", null), _react.default.createElement("a", {

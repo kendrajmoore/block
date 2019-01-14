@@ -12,7 +12,7 @@ class Landing extends Component {
             <div className="row">
               //{" "}
               <div className="second col-md-12 text-center">
-                <img src={pink} alt="Logo" />;
+                <img className="first-page" src={pink} alt="Logo" />;
                 <hr />
                 <a href="register.html" className="btn btn-lg btn-info mr-2">
                   Sign Up
