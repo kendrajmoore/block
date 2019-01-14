@@ -1,6 +1,6 @@
 body {
 
-  background-color: #ff63b1;
+  background-color: feeb72;
 
 
   word-wrap: break-word;
@@ -12,6 +12,7 @@ img {
   margin-top: 150px;
   margin-left: 150px;
 }
+
 .WalletInfo {
   margin-top: 100px;
   width: 500px;
@@ -24,6 +25,10 @@ img {
   justify-content: space-around;
 }
 
+img.card {
+  margin: 75px;
+  padding: 0;
+  width: 200px; }
 .landing-footer {
   margin-top: 400px;
 }
@@ -69,6 +74,10 @@ div.register {
 
 .landing-footer {
   margin-top: 400px;
+}
+
+a.btn btn-lg btn-info mr-2 {
+  margin-left: 200px;
 }
 
 .fix-footer {

@@ -1,5 +1,5 @@
 body {
-  background-color: #ff63b1;
+  background-color: feeb72;
   word-wrap: break-word;
   font-family: "Racing Sans One", cursive;
   color: #8035a9; }
@@ -17,6 +17,11 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around; }
+
+img.card {
+  margin: 75px;
+  padding: 0;
+  width: 200px; }
 
 .landing-footer {
   margin-top: 400px; }
@@ -54,6 +59,9 @@ div.register {
 
 .landing-footer {
   margin-top: 400px; }
+
+a.btn btn-lg btn-info mr-2 {
+  margin-left: 200px; }
 
 .fix-footer {
   margin-top: 650px; }
