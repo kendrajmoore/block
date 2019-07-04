@@ -10,7 +10,9 @@
     "start-redis": "redis-server --daemonize yes",
     "build-client": "npm run clean && parcel build client/src/index.html --out-dir client/dist",
     "dev-client": "npm run clean && parcel client/src/index.html --out-dir client/dist",
-    "clean": "rm -rf .cache client/dist"
+    "clean": "rm -rf .cache client/dist",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "testEnvironment": "node"
@@ -52,7 +54,8 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "request": "^2.88.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.189.0"
   },
   "repository": {
     "type": "git",
@@ -62,5 +65,6 @@
     "url": "https://github.com/kendrajmoore/block/issues"
   },
   "homepage": "https://github.com/kendrajmoore/block#readme",
-  "description": ""
+  "description": "",
+  "snyk": true
 }
