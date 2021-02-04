@@ -31,7 +31,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
-    "elliptic": "^6.4.1",
+    "elliptic": "^6.5.4",
     "express": "^4.16.4",
     "hex-to-binary": "^1.0.1",
     "history": "^4.7.2",
